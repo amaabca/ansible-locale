@@ -1,6 +1,6 @@
 ---
-- name: Generate Locale: {{ item }}
-  command: locale-gen {{ item }} {{ item}}.UTF-8
+- name: Generate Locale
+  command: locale-gen {{ item }} {{ item }}.UTF-8
   become: yes
   with_items: "{{ ansible_locales }}"
 
