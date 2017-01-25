@@ -1,2 +1,4 @@
 ---
-# defaults file for ansible-locale
+ansible_locales:
+  - en_CA
+  - en_US
