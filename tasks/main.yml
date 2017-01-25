@@ -1,2 +1,9 @@
 ---
-# tasks file for ansible-locale
+- name: Generate Locale
+  command: locale-gen {{ item }} {{ item }}.UTF-8
+  become: yes
+  with_items: "{{ ansible_locales }}"
+
+- name: Reconfigure System Locales
+  command: dpkg-reconfigure locales
+  become: yes
