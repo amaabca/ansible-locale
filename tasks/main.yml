@@ -5,5 +5,5 @@
   with_items: "{{ ansible_locales }}"
 
 - name: Reconfigure System Locales
-  command: dpkg-reconfigure locales
+  command: dpkg-reconfigure -f noninteractive locales
   become: yes
